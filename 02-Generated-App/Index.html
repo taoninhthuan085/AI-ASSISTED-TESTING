@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2>Tech Store</h2>
+      </div>
+
+      <div class="header-actions">
+        <div id="userProfile" class="user-profile hidden">
+          <span class="user-icon">👤</span>
+          <span id="userName">Guest</span>
+        </div>
+
+        <button id="loginBtn">Login</button>
+
+        <button id="logoutBtn" class="hidden">Logout</button>
+
+        <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Technology E-Commerce Website</h1>
+      <p>QA Testing & AI Assisted Testing Demo Application</p>
+    </section>
+
+    <section class="filters">
+      <input type="text" id="searchInput" placeholder="Search products..." />
+
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+      </select>
+
+      <select id="brandFilter">
+        <option value="">All Brands</option>
+      </select>
+    </section>
+
+    <main>
+      <section id="productContainer" class="product-grid"></section>
+    </main>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+
+        <div id="productDetail"></div>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal hidden">
+      <div class="modal-content cart-modal">
+        <span class="close" id="closeCart">&times;</span>
+
+        <h2>Shopping Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-summary">
+          <h3>
+            Total: $
+            <span id="cartTotal">0</span>
+          </h3>
+
+          <button id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" id="closeLogin"> &times; </span>
+
+        <h2>Login</h2>
+
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Username" required />
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" id="closeCheckout"> &times; </span>
+
+        <h2>Order Summary</h2>
+
+        <div id="orderSummary"></div>
+
+        <h3>
+          Total: $
+          <span id="orderTotal">0</span>
+        </h3>
+
+        <button id="placeOrderBtn">Place Order</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

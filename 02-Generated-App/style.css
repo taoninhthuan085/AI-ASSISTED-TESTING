@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Header */
+
+header {
+    background: #1f2937;
+    color: white;
+    padding: 15px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: white;
+    color: #333;
+
+    padding: 8px 12px;
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+.user-icon {
+    font-size: 18px;
+}
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#loginBtn,
+#logoutBtn {
+    background: #2563eb;
+    color: white;
+}
+
+#cartBtn {
+    background: #16a34a;
+    color: white;
+}
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+}
+
+/* Filters */
+
+.filters {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filters input,
+.filters select {
+    padding: 10px;
+    min-width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Products */
+
+.product-grid {
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+}
+
+.product-brand {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.product-category {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #16a34a;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    background: #2563eb;
+    color: white;
+    flex: 1;
+}
+
+.add-btn {
+    background: #16a34a;
+    color: white;
+    flex: 1;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 700px;
+
+    border-radius: 10px;
+    padding: 20px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Product Detail */
+
+.detail-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.detail-price {
+    color: #16a34a;
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+/* Cart */
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    background: #2563eb;
+    color: white;
+    width: 35px;
+    height: 35px;
+}
+
+.remove-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#checkoutBtn {
+    margin-top: 10px;
+    background: #16a34a;
+    color: white;
+}
+
+/* Login */
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#loginForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#loginForm button {
+    background: #2563eb;
+    color: white;
+}
+
+/* Checkout */
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#placeOrderBtn {
+    width: 100%;
+    margin-top: 20px;
+
+    background: #16a34a;
+    color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters input,
+    .filters select {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .quantity-controls {
+        flex-wrap: wrap;
+    }
+}
